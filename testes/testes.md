@@ -4,16 +4,6 @@ Os testes foram feitos no **n8n**, com o prompt renderizado como System Message 
 
 ## Ambiente e configuração
 
-| Item | Valor |
-|---|---|
-| Ferramenta | n8n, versão `____` |
-| Provedor / modelo | OpenAI, `____` |
-| Temperatura | `____` (a mesma em todas as execuções) |
-| System Message | Expressão `{{ $json.systemPrompt }}`: o prompt é renderizado pelo node **Backend simulado** a partir de `prompt/prompt.hbs` e do cadastro do cliente (referência: `prompt/prompt-renderizado.md`) |
-| Memória | Simple Memory, janela de 20 mensagens |
-| Tool | `validate_customer`, Custom Code Tool em Python (Beta) |
-| Workflow exportado | `n8n/workflow.json` |
-
 Estrutura do workflow:
 
 ```text
