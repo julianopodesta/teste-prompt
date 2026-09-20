@@ -54,7 +54,7 @@ Depois, com `isCPF: true`:
 
 Com `isCPF: false`, o mesmo trecho passa a pedir o CNPJ da empresa.
 
-## Decisões e premissas
+## Decisões
 
 - **O backend faz o que não é trabalho do modelo.** Ele extrai os dígitos, confere o tamanho do documento (11 ou 14), conta as tentativas e avisa a Mia com mensagens do tipo `[SISTEMA] DOCUMENTO_RECEBIDO`, `FORMATO_INVALIDO`, `LIMITE_TENTATIVAS`, `SEM_RESPOSTA_1`, `SEM_RESPOSTA_2`, `SEM_RESPOSTA_ENCERRAR`, `ARQUIVO_BLOQUEADO_1` e `ARQUIVO_BLOQUEADO_2`. Modelo de linguagem erra conta, então contar tentativas só no prompt é frágil.
 - **A Mia não conhece o documento cadastrado.** Quem compara é a tool, então assumi que ela valida contra o cadastro do cliente da conversa, porque o enunciado do teste não diz.
